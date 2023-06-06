@@ -1,0 +1,98 @@
+<div style="padding: 2px; border: 1px solid rgb(204, 204, 204); border-radius: 5px; font-family: Arial, Helvetica, sans-serif; font-size: 11px; background-color: rgb(238, 238, 238);">
+    <h2>Calculates component volumes for&nbsp;Gibson mix.</h2>
+    
+    <p>- Set the Number of Fragments appropriately&nbsp;<br />
+    - Fragment:Plasmid&nbsp;Ratio&nbsp;should be 5 or 7 for smaller fragments (&lt;=250bp) and should be 1 or 2 for larger.<br />
+    -&nbsp;Final Volume doesn&#39;t need to be changed for our lab given you are using the 7.5&micro;l aliquot of isothermal buffer.&nbsp;<br />
+    - Enter the values&nbsp;for each component</p>
+    &nbsp;
+    
+    <table class="change" id="table2">
+        <tbody>
+            <tr>
+                <td style="width: 191px;">Number of Fragments</td>
+                <td style="width: 135px;"><input class="input-change input-change2" id="num-of-frags" name="num-of-frags_number" type="text" /></td>
+            </tr>
+            <tr>
+                <td style="width: 191px;">Fragment:Plasmid Ratio</td>
+                <td style="width: 135px;"><input class="input-change input-change2" id="fpratio" name="fpratio_number" type="text" /></td>
+            </tr>
+            <tr>
+                <td style="width: 191px;">Final volume(<span style="font-family: Arial, Helvetica, sans-serif; font-size: 11px; font-weight: 700; text-align: center; background-color: rgb(238, 238, 238);">&micro;l</span>)</td>
+                <td style="width: 135px;"><input class="input-change input-change2" id="final-volume" name="final-volume_number" type="text" value="2.5" /></td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <table class="change" id="table2">
+        <tbody>
+            <tr>
+                <th>Components</th>
+                <th>Length (bp)</th>
+                <th>Concentration (ng/&micro;l)</th>
+                <th>Volume (&micro;l)</th>
+            </tr>
+            <tr>
+                <td><input id="component-1" name="component-1" readonly="readonly" type="text" style="background-color:#F0E6F0" value="Vector" /></td>
+                <td><input class="length-input input-change2" data-column="1" id="length-1" name="length-1_number" type="text" /></td>
+                <td><input class="concentration-input input-change2" data-column="1" id="concentration-1" name="concentration-1_number" type="text" /></td>
+                <td><input id="reagent-volume-1" name="reagent-volume-1" readonly="readonly" style="background-color:#F0E6F0" type="text" /></td>
+            </tr>
+            <tr>
+                <td><input id="component-2" name="component-2" readonly="readonly" type="" style="background-color:#F0E6F0" value="Fragment 1" /></td>
+                <td><input class="length-input input-change2" data-column="2" id="length-2" name="length-2_number" type="text" /></td>
+                <td><input class="concentration-input input-change2" data-column="2" id="concentration-2" name="final_2_number" type="text" /></td>
+                <td><input id="reagent-volume-2" name="reagent-volume-2" readonly="readonly" style="background-color:#F0E6F0" type="text" /></td>
+            </tr>
+            <tr>
+                <td><input id="component-3" name="component-3" readonly="readonly" type="" style="background-color:#F0E6F0" value="Fragment 2" /></td>
+                <td><input class="length-input input-change2" data-column="3" id="length-3" name="length-3_number" type="text" /></td>
+                <td><input class="concentration-input input-change2" data-column="3" id="concentration-3" name="final_3_number" type="text" /></td>
+                <td><input id="reagent-volume-3" name="reagent-volume-3" readonly="readonly" style="background-color:#F0E6F0" type="text" /></td>
+            </tr>
+            <tr>
+                <td><input id="component-4" name="component-4" readonly="readonly" style="background-color:#F0E6F0" value="Fragment 3" /></td>
+                <td><input class="length-input input-change2" data-column="4" id="length-4" name="length-4_number" type="text" /></td>
+                <td><input class="concentration-input input-change2" data-column="4" id="concentration-4" name="final_4_number" type="text" /></td>
+                <td><input id="reagent-volume-4" name="reagent-volume-4" readonly="readonly" style="background-color:#F0E6F0" type="text" /></td>
+            </tr>
+            <tr>
+                <td><input id="component-5" name="component-5" readonly="readonly" style="background-color:#F0E6F0" value="Fragment 4" /></td>
+                <td><input class="length-input input-change2" data-column="5" id="length-5" name="length-5_number" type="text" /></td>
+                <td><input class="concentration-input input-change2" data-column="5" id="concentration-5" name="final_5_number" type="text" /></td>
+                <td><input id="reagent-volume-5" name="reagent-volume-5" readonly="readonly" style="background-color:#F0E6F0" type="text" /></td>
+            </tr>
+            <tr>
+                <td><input id="component-6" name="component-6" readonly="readonly" style="background-color:#F0E6F0" value="Fragment 5" /></td>
+                <td><input class="length-input input-change2" data-column="6" id="length-6" name="length-6_number" type="text" /></td>
+                <td><input class="concentration-input input-change2" data-column="6" id="concentration-6" name="final_6_number" type="text" /></td>
+                <td><input id="reagent-volume-6" name="reagent-volume-6" readonly="readonly" style="background-color:#F0E6F0" type="text" /></td>
+            </tr>
+            <tr>
+                <td><input id="component-7" name="component-7" readonly="readonly" type="text" style="background-color:#F0E6F0" value="Fragment 6" /></td>
+                <td><input class="length-input input-change2" data-column="7" id="length-7" name="length-7_number" type="text" /></td>
+                <td><input class="concentration-input input-change2" data-column="7" id="concentration-7" name="final_7_number" type="text" /></td>
+                <td><input id="reagent-volume-7" name="reagent-volume-7" readonly="readonly" style="background-color:#F0E6F0" type="text" /></td>
+            </tr>
+            <tr>
+                <td><input id="component-8" name="component-8" readonly="readonly" style="background-color:#F0E6F0" value="Fragment 7" /></td>
+                <td><input class="length-input input-change2" data-column="8" id="length-8" name="length-8_number" type="text" /></td>
+                <td><input class="concentration-input input-change2" data-column="8" id="concentration-8" name="final_8_number" type="text" /></td>
+                <td><input id="reagent-volume-8" name="reagent-volume-8" readonly="readonly" style="background-color:#F0E6F0" type="text" /></td>
+            </tr>
+            <tr>
+                <td><input id="component-9" name="component-9" style="background-color:#F0E6F0" value="Fragment 8" /></td>
+                <td><input class="length-input input-change2" data-column="9" id="length-9" name="length-9_number" type="text" /></td>
+                <td><input class="concentration-input input-change2" data-column="9" id="concentration-9" name="final_9_number" type="text" /></td>
+                <td><input id="reagent-volume-9" name="reagent-volume-9" readonly="readonly" style="background-color:#F0E6F0" type="text" /></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>Mass of Vector</td>
+                <td><input id="reagent-volume-12" name="reagent-volume-12" readonly="readonly" style="background-color:#F0E6F0" type="text" /></td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+    
