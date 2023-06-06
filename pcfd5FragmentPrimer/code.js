@@ -165,4 +165,11 @@ $(".output-style").css({
   name: "output-field",
   readonly: "readonly",
   "background-color": "#F0E6F0",
+  width: "100%",
+});
+$("input").css({
+  width: "100%",
+});
+$("td").css({
+  width: "100%",
 });
