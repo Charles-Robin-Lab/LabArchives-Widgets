@@ -1,5 +1,4 @@
 
-
 my_widget_script =
 {
   init:function (mode, json_data) {
@@ -83,9 +82,10 @@ $(document).ready(function(){
     $.each(fragments, function(index, value){
           var length = $("#length-" + value).val()
           var concentration = $("#concentration-" + value).val()
-          intermediateSum += length/concentration
+          var fpRatio = parseFloat($("#fpratio-" + value).val())
+          intermediateSum += fpRatio*length/concentration
     });
-    var vectorMass = finalVolume/(1/vectorConcentration+fpRatio*intermediateSum/vectorLength)
+    var vectorMass = finalVolume/(1/vectorConcentration+intermediateSum/vectorLength)
     $("#reagent-volume-12").val(parseFloat(vectorMass.toFixed(5)))
 
     var vectorVolume = vectorMass/vectorConcentration
@@ -93,6 +93,7 @@ $(document).ready(function(){
     $.each(fragments, function(index, value){
       var length = $("#length-" + value).val()
       var concentration = $("#concentration-" + value).val()
+      var fpRatio = parseFloat($("#fpratio-" + value).val())
       var volume = length*fpRatio*vectorMass/(vectorLength*concentration)
       $("#reagent-volume-" + value).val(parseFloat(volume.toFixed(5)))
     });
